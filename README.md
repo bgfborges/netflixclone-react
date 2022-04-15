@@ -13,5 +13,5 @@ This is a Netflix Clone with ReactJS and external API.
 And we will practice the following tools:
 
 <ul>
-    <li></li>
+    <li>Axios</li>
 </ul>
