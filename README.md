@@ -1,4 +1,4 @@
-<center><img src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-5.png" /></center>
+<center><img src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-5.png" width="100" /></center>
 
 # Clone Netflix with React
 
