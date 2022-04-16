@@ -4,7 +4,7 @@
 
 This is a Netflix Clone with ReactJS and external API.
 
-<img src="https://i.postimg.cc/NGHhQxs1/Screen-Shot-2022-04-16-at-13-18-32.png" width="100%" alt="Final Screen" />
+[![Screen-Shot-2022-04-16-at-13-18-32.png](https://i.postimg.cc/NGHhQxs1/Screen-Shot-2022-04-16-at-13-18-32.png)](https://postimg.cc/K4xpNBgz)
 
 <ul>
     <li>Work with External API</li>
