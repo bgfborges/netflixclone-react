@@ -1,4 +1,5 @@
-import './FeaturedMovie.css';
+import { BsPlayFill } from 'react-icons/bs';
+import './styles.css';
 
 const FeaturedMovie = ({ item }) => {
 
@@ -6,6 +7,11 @@ const FeaturedMovie = ({ item }) => {
     let genres = [];
     for(let i in item.genres){
         genres.push(item.genres[i].name);
+    }
+
+    let description = item.overview;
+    if( description.length > 200 ){
+        description = description.substring(0, 200) + '...';
     }
 
 
@@ -23,10 +29,10 @@ const FeaturedMovie = ({ item }) => {
                     <div className="featured--year">{ firstDate.getFullYear() }</div>
                     <div className="featured--year">{ item.number_of_seasons } season{item.number_of_seasons !== 1 && 's'}</div>
                 </div>
-                <div className="featured--description">{ item.overview }</div>
+                <div className="featured--description">{ description }</div>
                 <div className="featured--buttons">
-                    <a href={`/watch/${item.id}`} className="featured--watchbutton">▶ Watch</a>
-                    <a href={`/list/add/${item.id}`} className="featueed--mylistbutton">+ My List </a>
+                    <a href={`/watch/${item.id}`} className="featured--watchbutton"><BsPlayFill /> Watch</a>
+                    <a href={`/list/add/${item.id}`} className="featured--mylistbutton">+ My List </a>
                 </div>
                 <div className="featured--genres">
                     <strong>Genres: </strong>{ genres.join(', ')}

@@ -11,8 +11,8 @@ import { tmdbApi } from './tmdbApi';
 * DOCUMENTARIES
 */
 
-const basicFatch = async (endpoint) => {
-    const { data } = await tmdbApi.get(endpoint + 'language=en&api_key=' + process.env.REACT_APP_TMDB_API_KEY);
+const basicFatch = async (endpoint, genre = '') => {
+    const { data } = await tmdbApi.get(endpoint + 'language=en-US&api_key=' + process.env.REACT_APP_TMDB_API_KEY + genre);
     return data;
 }
 
@@ -22,7 +22,7 @@ export const Tmdb = {
             {
                 slug: 'originals',
                 title: 'Netflix Originals',
-                items: await basicFatch('/discover/tv?with_network=213&')
+                items: await basicFatch('/discover/tv?with_networks=213&')
             },
             {
                 slug: 'trending',
@@ -37,27 +37,27 @@ export const Tmdb = {
             {
                 slug: 'action',
                 title: 'Action',
-                items: await basicFatch('/discover/movie?with_genres=28?')
+                items: await basicFatch('/discover/tv?', '&with_genres=10759')
             },
             {
                 slug: 'comedy',
                 title: 'Comedy',
-                items: await basicFatch('/discover/movie?with_genres=35?')
+                items: await basicFatch('/discover/tv?', '&with_genres=35')
             },
             {
                 slug: 'horror',
-                title: 'Horror',
-                items: await basicFatch('/discover/movie?with_genres=27?')
+                title: 'Crime',
+                items: await basicFatch('/discover/tv?', '&with_genres=80')
             },
             {
                 slug: 'romance',
                 title: 'Romance',
-                items: await basicFatch('/discover/movie?with_genres=10749?')
+                items: await basicFatch('/discover/tv?', '&with_genres=10749')
             },
             {
                 slug: 'documentary',
                 title: 'Documentary',
-                items: await basicFatch('/discover/movie?with_genres=99?')
+                items: await basicFatch('/discover/tv?', '&with_genres=99')
             }
         ]
     },

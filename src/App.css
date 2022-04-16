@@ -11,39 +11,28 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.movieRow:not(:first-child) {
-    margin-top: 30px;
-}
-
-.movieRow h2 {
-    margin: 0 0 0 30px;
-}
-
-.movieRow--listarea {
-    overflow-x: hidden;
-}
-
-.movieRow--list {
-    width: 99999999px;
-    padding-left: 30px;
-}
-
-.movieRow--item {
-    display: inline-block;
-    width: 250px;
-}
-
-.movieRow--item img {
-    width: 100%;
-    transform: scale(0.9);
-    transition: transform ease 200ms;
-    cursor: pointer;
-}
-
-.movieRow--item img:hover {
-    transform: scale(1);
-}
-
 .lists {
     margin-top: -150px;
+}
+
+.footer {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    z-index: 100;
+}
+
+.loading img {
+    width: 40%;
 }
