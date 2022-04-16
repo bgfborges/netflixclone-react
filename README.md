@@ -4,6 +4,8 @@
 
 This is a Netflix Clone with ReactJS and external API.
 
+<img src="https://i.postimg.cc/NGHhQxs1/Screen-Shot-2022-04-16-at-13-18-32.png" width="100%" alt="Final Screen" />
+
 <ul>
     <li>Work with External API</li>
     <li>Responsive Layout</li>
